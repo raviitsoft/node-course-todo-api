@@ -4,12 +4,17 @@ const {mongoose} = require('./../server/db/mongoose');
 const {Todo} = require('./../server/models/todo');
 const {User} = require('./../server/models/user');
 
+// Todo.remove({}).then((result) => {
+//   console.log(result);
+// });
 
-Todo.findByIdAndRemove('57bdb0fcdedf88540bfa2d66').then((todo) => {
-  if (!todo) {
-    return console.log("Unable to find user");
-  }
-  console.log(JSON.stringify(todo, undefined, 2));
-}, (e) => {
-  console.log(e);
+// Todo.findOneAndRemove
+// Todo.findByIdAndRemove
+
+// Todo.findOneAndRemove({_id: '57c4610dbb35fcbf6fda1154'}).then((todo) => {
+//
+// });
+
+Todo.findByIdAndRemove('57c4610dbb35fcbf6fda1154').then((todo) => {
+  console.log(todo);
 });
